@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RUBY_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="RailsFacetType" name="Ruby on Rails">
+      <configuration>
+        <RAILS_FACET_CONFIG_ID NAME="RAILS_FACET_SUPPORT_REMOVED" VALUE="false" />
+        <RAILS_FACET_CONFIG_ID NAME="RAILS_TESTS_SOURCES_PATCHED" VALUE="true" />
+        <RAILS_FACET_CONFIG_ID NAME="RAILS_FACET_APPLICATION_ROOT" VALUE="$MODULE_DIR$/../../demo" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../../demo">
+      <sourceFolder url="file://$MODULE_DIR$/../../demo/features" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../demo/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../demo/test" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/../../demo/.bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../demo/public/packs" />
+      <excludeFolder url="file://$MODULE_DIR$/../../demo/vendor/bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../demo/vendor/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/../../demo/log" />
+      <excludeFolder url="file://$MODULE_DIR$/../../demo/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/../../demo/public/system" />
+      <excludeFolder url="file://$MODULE_DIR$/../../demo/components" />
+    </content>
+    <orderEntry type="jdk" jdkName="rbenv: 3.0.1" jdkType="RUBY_SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="RubyModuleProperties">
+    <option name="autoCreated" value="true" />
+  </component>
+</module>

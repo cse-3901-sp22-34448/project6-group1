@@ -1,0 +1,2 @@
+class PresentationInfoController < ApplicationController
+end

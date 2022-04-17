@@ -1,0 +1,2 @@
+class ClassMemberController < ApplicationController
+end

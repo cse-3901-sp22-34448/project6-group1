@@ -18,7 +18,7 @@ class PresentationInfoController < ApplicationController
 
         respond_to do |format|
             if @presentation.save
-                format.html{ redirect_to presentation_url(@presentation), notice: "Presentation was successfully created." }
+                format.html{ redirect_to presentation_url(@presentation), notice: "PresentationInfo was successfully created." }
                 format.json { render :show, status: :created, location: @presentation }
             else 
                 format.html { render :new, status: :unprocessable_entity }
@@ -30,7 +30,7 @@ class PresentationInfoController < ApplicationController
     def update
         respond_to do |format|
             if @presentation.update(presentation_params)
-                format.html { redirect_to presentation_url(@presentation), notice: "Presentation was successfully updated." }
+                format.html { redirect_to presentation_url(@presentation), notice: "PresentationInfo was successfully updated." }
                 format.json { render :show, status: :ok, location: @presentation }
             else
                 format.html { render :edit, status: :unprocessable_entity }
@@ -43,7 +43,7 @@ class PresentationInfoController < ApplicationController
         @presentation.destroy
         
         respond_to do |format|
-            format.html { redirect_to presentations_url, notice: "Presentation was successfully destroyed." }
+            format.html { redirect_to presentations_url, notice: "PresentationInfo was successfully destroyed." }
             format.json { head :no_content }
         end
     end

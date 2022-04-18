@@ -1,9 +1,8 @@
 class EvaluationsController < ApplicationController
   before_action :set_evaluation, only: %i[ show edit update destroy ]
-
   # GET /evaluations or /evaluations.json
   def index
-    @evaluations = Evaluation.all
+    @evaluations = Evaluation.where(user_id: current_user.id)
   end
 
   # GET /evaluations/1 or /evaluations/1.json
@@ -12,17 +11,17 @@ class EvaluationsController < ApplicationController
 
   # GET /evaluations/new
   def new
-    @evaluation = Evaluation.new
+    @evaluation = current_user.evaluations.build()
   end
 
   # GET /evaluations/1/edit
   def edit
   end
+  
 
   # POST /evaluations or /evaluations.json
   def create
-    @evaluation = Evaluation.new(evaluation_params)
-
+    @evaluation = current_user.evaluations.build(evaluation_params)
     respond_to do |format|
       if @evaluation.save
         format.html { redirect_to evaluation_url(@evaluation), notice: "Evaluation was successfully created." }
@@ -65,6 +64,6 @@ class EvaluationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def evaluation_params
-      params.require(:evaluation).permit(:user_name, :presentation_name, :Scores, :comment)
+      params.require(:evaluation).permit(:presentation_name, :Scores, :comment, :user_id)
     end
 end

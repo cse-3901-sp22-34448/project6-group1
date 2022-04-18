@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_18_113119) do
+ActiveRecord::Schema.define(version: 2022_04_18_150459) do
 
   create_table "evaluations", force: :cascade do |t|
-    t.string "user_name"
-    t.string "presentation_name"
-    t.float "Scores"
+    t.string "presentation_name", null: false
+    t.integer "Scores", null: false
     t.text "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_evaluations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

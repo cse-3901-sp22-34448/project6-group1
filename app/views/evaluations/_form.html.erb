@@ -14,13 +14,12 @@
 
   <div class="field form-group">
     <%= form.label :presentation_name %>
-    <% @presentation.map do |x|
-        [x.name, x.id]
-       end
-    %>
+    <% @presentation = Presentation.all
+      @presentation = @presentation.map do |x|
+      [x.name, x.id]
+    end%>
     <%= select_tag(:presentation_id,options_for_select(@presentation))%>
   </div>
-
   <div class="field form-group">
     <%= form.label :Scores %>
     <%= form.number_field :Scores, class:"form-control", placeholder:"Scale From 0 to 10", min:0, max:10 %>

@@ -1,4 +1,4 @@
 class Presentation < ApplicationRecord
-    has_many :evaluations
+    has_many :evaluations 
     belongs_to :user
 end

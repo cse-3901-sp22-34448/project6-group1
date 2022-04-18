@@ -1,7 +1,7 @@
 
 <p>
   <strong>PresentationName:</strong>
-  <%= @evaluation.presentation_name %>
+  <%= Presentation.where(id: @evaluation.presentations_id).name%>
 </p>
 
 <p>

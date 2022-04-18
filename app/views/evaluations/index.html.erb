@@ -12,7 +12,8 @@
   <tbody>
     <% @evaluations.each do |evaluation| %>
       <tr>
-        <td><%= evaluation.presentation_name %></td>
+        <td><%= Presentation.where(id: evaluation.presentations_id).name%>
+        </td>
         <td><%= evaluation.Scores %></td>
         <td><%= link_to 'Show', evaluation %></td>
         <td><%= link_to 'Edit', edit_evaluation_path(evaluation) %></td>

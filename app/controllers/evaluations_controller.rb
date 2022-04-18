@@ -21,8 +21,9 @@ class EvaluationsController < ApplicationController
 
   # POST /evaluations or /evaluations.json
   def create
-    @evaluation = current_user.evaluations.build(evaluation_params)
-    @Presentations = Presentation.all
+    @presentation = Presentation.where(:id => 1)
+    # @evaluation = @presentation.evaluations.create(evaluation_params)
+    @evaluation = Evaluation.new(evaluation_params)
     respond_to do |format|
       if @evaluation.save
         format.html { redirect_to evaluation_url(@evaluation), notice: "Evaluation was successfully created." }
@@ -36,7 +37,6 @@ class EvaluationsController < ApplicationController
 
   # PATCH/PUT /evaluations/1 or /evaluations/1.json
   def update
-    @Presentations = Presentation.all
     respond_to do |format|
       if @evaluation.update(evaluation_params)
         format.html { redirect_to evaluation_url(@evaluation), notice: "Evaluation was successfully updated." }

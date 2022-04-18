@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Evaluations</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>User name</th>
+      <th>Presentation name</th>
+      <th>Scores</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @evaluations.each do |evaluation| %>
+      <tr>
+        <td><%= evaluation.user_name %></td>
+        <td><%= evaluation.presentation_name %></td>
+        <td><%= evaluation.Scores %></td>
+        <td><%= link_to 'Show', evaluation %></td>
+        <td><%= link_to 'Edit', edit_evaluation_path(evaluation) %></td>
+        <td><%= link_to 'Destroy', evaluation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Evaluation', new_evaluation_path, class: "btn btn-primary"%>
+

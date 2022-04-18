@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :presentations
   devise_for :users
   resources :evaluations
   root 'home#index'

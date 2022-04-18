@@ -1,0 +1,31 @@
+<%= form_with(model: presentation, local: true) do |form| %>
+  <% if presentation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(presentation.errors.count, "error") %> prohibited this presentation from being saved:</h2>
+
+      <ul>
+        <% presentation.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, class:"form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :class_infos_id %>
+    <%= form.number_field :class_infos_id, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.number_field :user_id, id: :evalaution_user_id, class:"form-control", value: current_user.id, type: :hidden%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

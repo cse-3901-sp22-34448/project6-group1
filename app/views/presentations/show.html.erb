@@ -1,0 +1,17 @@
+<p>
+  <strong>Name:</strong>
+  <%= @presentation.name %>
+</p>
+
+<p>
+  <strong>Class infos:</strong>
+  <%= @presentation.class_infos_id %>
+</p>
+
+<p>
+  <strong>Presentor</strong>
+  <%= @presentation.user.name %>
+</p>
+
+<%= link_to 'Edit', edit_presentation_path(@presentation), class: "btn btn-primary" %> 
+<%= link_to 'Back', presentations_path, class: "btn btn-primary" %>
